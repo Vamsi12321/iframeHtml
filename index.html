@@ -19,18 +19,18 @@
 
 <body>
     <div>
-        hello, from iframe
+        hello, from iframe 2
 
         <script>
             // Function to send a message to the parent window
 const sendMessageToParent = () => {
   const message = "Hello from iframe!";
-  window.parent.postMessage(message, "http://localhost:5173");
+  window.parent.postMessage(message, "http://localhost:3000");
 };
 
 // Add event listener to handle messages from the parent window
 const handleMessageFromParent = (event) => {
-  if (event.origin === "http://localhost:5173") {
+  if (event.origin === "http://localhost:3000") {
     console.log("Message received from parent window:", event.data);
     // Handle the received message from parent window as needed
   } else {
