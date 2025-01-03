@@ -18,39 +18,12 @@
 
 
 <body>
-    <div>
-        hello, from iframe 2
-
-        <script>
-            // Function to send a message to the parent window
-window.addEventListener("load",()=>{
-    console.log("windowssss")
-})
-            
-const sendMessageToParent = () => {
-  const message = "Hello from iframe!";
-  window.parent.postMessage(message, "http://localhost:3000");
-};
-
-// Add event listener to handle messages from the parent window
-const handleMessageFromParent = (event) => {
-  if (event.origin === "http://localhost:3000") {
-    console.log("Message received from parent window:", event.data);
-    // Handle the received message from parent window as needed
-  } else {
-    console.warn("Message rejected from unauthorized origin:", event.origin);
-    // Optionally, reject or ignore messages from unauthorized origins
-  }
-};
-
-window.addEventListener("message", handleMessageFromParent);
-
-// Example: Send a message to the parent window after 3 seconds
-setTimeout(sendMessageToParent, 3000);
-
-        </script>
-
+    <div id="rootjs" >
+        hello, from react
     </div>
+       <script src="./js/main.869dee86.js" ></script>
+    <script src="./js/main.869dee86.js.LICENSE.txt"></script>
+    <script src="./js/main.869dee86.js.map" ></script>
 
 
 </body>
